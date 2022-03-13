@@ -136,7 +136,7 @@ class inputCategoriesActivity : AppCompatActivity() {
                     progressDialog.dismiss()
                     Toast.makeText(this,"Category has been posted successfully", Toast.LENGTH_LONG).show()
 
-                    val intent = Intent(this, MainActivity6::class.java)
+                    val intent = Intent(this, NavigationActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
 

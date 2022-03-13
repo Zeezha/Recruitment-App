@@ -21,9 +21,8 @@
         <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity7" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.SimuActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.spinnersActivity" />
-        <activity android:name="com.kelompok2.recruitmentapp.Activity.ujumbeActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.AboutUsActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.verificationActivity" />
-        <activity android:name="com.kelompok2.recruitmentapp.Activity.autocompleteActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -40,7 +39,7 @@
         </activity>
         <activity android:name="com.kelompok2.recruitmentapp.Activity.LatestMessagesActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.ForgotPasswordActivity" />
-        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity6" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.NavigationActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.CommentsActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.StoryActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.AddStoryActivity" />
@@ -64,12 +63,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity5" />
-        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity4" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.BasicActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.CompanyActivity" />
-        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity3" />
-        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity2" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.SignupActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.SigninActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Fragments.DiscoverFragment" />

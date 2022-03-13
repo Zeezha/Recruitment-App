@@ -13,7 +13,7 @@ import com.google.android.material.navigation.NavigationView
 import com.kelompok2.recruitmentapp.*
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity6 : AppCompatActivity() {
+class NavigationActivity : AppCompatActivity() {
     lateinit var secondFragment: SecondFragment
     lateinit var lastFragment: LastFragment
     lateinit var notificationsFragment: NotificationsFragment
@@ -30,14 +30,14 @@ class MainActivity6 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main6)
+        setContentView(R.layout.activity_navigation)
 
         val bottomNavigation : BottomNavigationView = findViewById(R.id.btn_nav)
 
-        val window:Window = this@MainActivity6.window
+        val window:Window = this@NavigationActivity.window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-        window.statusBarColor = ContextCompat.getColor(this@MainActivity6, R.color.giddy)
+        window.statusBarColor = ContextCompat.getColor(this@NavigationActivity, R.color.giddy)
 
         lastFragment = LastFragment()
         supportFragmentManager

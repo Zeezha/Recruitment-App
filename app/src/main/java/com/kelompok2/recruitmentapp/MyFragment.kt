@@ -57,7 +57,7 @@ class MyFragment : Fragment() {
         }
 
         view.ujumbe.setOnClickListener {
-            val intent = Intent(context, ujumbeActivity::class.java)
+            val intent = Intent(context, AboutUsActivity::class.java)
             startActivity(intent)
         }
         view.ccategory.setOnClickListener {

@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kelompok2.recruitmentapp.R
 
-class ujumbeActivity : AppCompatActivity() {
+class AboutUsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ujumbe)
+        setContentView(R.layout.activity_about_us)
     }
 }

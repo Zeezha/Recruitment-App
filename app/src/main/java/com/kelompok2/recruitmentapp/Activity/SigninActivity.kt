@@ -63,7 +63,7 @@ class SigninActivity : AppCompatActivity() {
                     if (task.isSuccessful)
                     {
                         progressDialog.dismiss()
-                        val intent = Intent(this@SigninActivity, MainActivity6::class.java)
+                        val intent = Intent(this@SigninActivity, NavigationActivity::class.java)
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
                         finish()
@@ -86,7 +86,7 @@ class SigninActivity : AppCompatActivity() {
 
         if (FirebaseAuth.getInstance().currentUser != null)
         {
-            val intent = Intent(this@SigninActivity, MainActivity6::class.java)
+            val intent = Intent(this@SigninActivity, NavigationActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()

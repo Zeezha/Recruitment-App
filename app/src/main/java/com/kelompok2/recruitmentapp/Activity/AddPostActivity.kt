@@ -105,7 +105,7 @@ class AddPostActivity : AppCompatActivity() {
 
                         Toast.makeText(this,"Post has been uploaded successfully", Toast.LENGTH_LONG).show()
 
-                        val intent = Intent(this, MainActivity6::class.java)
+                        val intent = Intent(this, NavigationActivity::class.java)
                         startActivity(intent)
                         finish()
                         progressDialog.dismiss()

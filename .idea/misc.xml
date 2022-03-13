@@ -3,24 +3,35 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_autocomplete.xml" value="0.1109375" />
         <entry key="app/src/main/res/layout/activity_basic.xml" value="0.23014999409675765" />
         <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.1140625" />
         <entry key="app/src/main/res/layout/activity_education.xml" value="0.4760876404845185" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.5894409336815027" />
+        <entry key="app/src/main/res/layout/activity_home_fragment.xml" value="0.1109375" />
         <entry key="app/src/main/res/layout/activity_introductionactivity.xml" value="0.2868867506767839" />
+        <entry key="app/src/main/res/layout/activity_jobposting.xml" value="0.1140625" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.21875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24789556047255917" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/activity_main3.xml" value="0.13793710381842036" />
+        <entry key="app/src/main/res/layout/activity_main3.xml" value="0.18083112761978937" />
         <entry key="app/src/main/res/layout/activity_main4.xml" value="0.1140625" />
+        <entry key="app/src/main/res/layout/activity_main5.xml" value="0.1109375" />
         <entry key="app/src/main/res/layout/activity_main6.xml" value="0.1140625" />
-        <entry key="app/src/main/res/layout/activity_main7.xml" value="0.1140625" />
+        <entry key="app/src/main/res/layout/activity_main7.xml" value="0.18312119345472536" />
         <entry key="app/src/main/res/layout/activity_main8.xml" value="0.1140625" />
         <entry key="app/src/main/res/layout/activity_main9.xml" value="0.19323774929796364" />
+        <entry key="app/src/main/res/layout/activity_navigation.xml" value="0.1109375" />
         <entry key="app/src/main/res/layout/activity_signin.xml" value="0.2136339679932419" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/activity_slide.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.38286136690037487" />
+        <entry key="app/src/main/res/layout/activity_tafutanetwork.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/activity_ujumbe.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/activity_userdetails.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/comments_item_layout.xml" value="0.1140625" />
         <entry key="app/src/main/res/layout/draft_layout.xml" value="0.1140625" />
+        <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.2202982747201766" />
       </map>
     </option>
   </component>

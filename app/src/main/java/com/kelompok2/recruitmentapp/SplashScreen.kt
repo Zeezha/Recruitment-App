@@ -8,7 +8,7 @@ import android.view.Window
 import android.view.WindowManager
 import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
-import com.kelompok2.recruitmentapp.Activity.MainActivity6
+import com.kelompok2.recruitmentapp.Activity.NavigationActivity
 import com.kelompok2.recruitmentapp.Activity.introductionactivity
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
@@ -35,7 +35,7 @@ class SplashScreen : AppCompatActivity() {
         else {
         Handler().postDelayed({
 
-                startActivity(Intent(this, MainActivity6::class.java))
+                startActivity(Intent(this, NavigationActivity::class.java))
             finish()
         }, SPLASH_TIME)
         }

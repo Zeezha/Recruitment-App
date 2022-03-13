@@ -22,7 +22,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.kelompok2.recruitmentapp.Activity.CommentsActivity
-import com.kelompok2.recruitmentapp.Activity.MainActivity6
+import com.kelompok2.recruitmentapp.Activity.NavigationActivity
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 
@@ -103,7 +103,7 @@ class PostAdapter(private var mContext:Context,
                     .child(post.getPostid())
                     .child(firebaseUser!!.uid)
                     .removeValue()
-                val intent = Intent(mContext, MainActivity6::class.java)
+                val intent = Intent(mContext, NavigationActivity::class.java)
                 mContext.startActivity(intent)
             }
         }
