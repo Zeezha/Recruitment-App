@@ -13,6 +13,73 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
+
+        <activity android:name="com.kelompok2.recruitmentapp.DashboardActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity9" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.introductionactivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity8" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity7" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.SimuActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.spinnersActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.ujumbeActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.verificationActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.autocompleteActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAMek1W0t-T2Uu_ii79ZwNkLOjtirSs18U" />
+
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.slideActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.FeedActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.inputCategoriesActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.ChatLogActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.NewMessageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kelompok2.recruitmentapp.Activity.LatestMessagesActivity" />
+        </activity>
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.LatestMessagesActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.ForgotPasswordActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity6" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.CommentsActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.StoryActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.AddStoryActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.testingActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.LoginActivity"/>
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.AddPostActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3376169146760040~5789277526" />
+
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.UserdetailsActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.TafutanetworkActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.JobpostingActivity" />
+        <activity
+            android:name="com.kelompok2.recruitmentapp.SplashScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity5" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity4" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.BasicActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.CompanyActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity3" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.MainActivity2" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.SignupActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Activity.SigninActivity" />
+        <activity android:name="com.kelompok2.recruitmentapp.Fragments.DiscoverFragment" />
+        <activity android:name="com.kelompok2.recruitmentapp.Fragments.HomeFragment" />
+        <activity
+            android:name="com.kelompok2.recruitmentapp.Activity.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
     </application>
 
 </manifest>
