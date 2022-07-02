@@ -18,6 +18,7 @@ import com.kelompok2.recruitmentapp.Model.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
+import com.kelompok2.recruitmentapp.Activity.SigninActivity
 import kotlinx.android.synthetic.main.second_layout.*
 import kotlinx.android.synthetic.main.second_layout.cat
 import kotlinx.android.synthetic.main.second_layout.view.*
@@ -409,7 +410,7 @@ class SecondFragment : Fragment(){
             }
 
             override fun onCancelled(error: DatabaseError) {
-                startActivity(Intent(context,SigninActivity::class.java))
+                startActivity(Intent(context, SigninActivity::class.java))
             }
         })
     }

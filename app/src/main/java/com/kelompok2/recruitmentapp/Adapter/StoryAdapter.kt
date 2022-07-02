@@ -10,11 +10,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
-import com.kelompok2.recruitmentapp.AddStoryActivity
+import com.kelompok2.recruitmentapp.Activity.AddStoryActivity
 import com.kelompok2.recruitmentapp.Model.Story
 import com.kelompok2.recruitmentapp.Model.User
 import com.kelompok2.recruitmentapp.R
-import com.kelompok2.recruitmentapp.StoryActivity
+import com.kelompok2.recruitmentapp.Activity.StoryActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

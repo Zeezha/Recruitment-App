@@ -15,6 +15,7 @@ import com.kelompok2.recruitmentapp.Model.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
+import com.kelompok2.recruitmentapp.Activity.LatestMessagesActivity
 import kotlinx.android.synthetic.main.activity_main7.view.*
 import kotlinx.android.synthetic.main.fragment_last.view.wditwhat
 
@@ -44,7 +45,7 @@ class LastFragment : Fragment() {
         val view =  inflater.inflate(R.layout.activity_main7, container, false)
 
         view.optiven.setOnClickListener {
-            startActivity(Intent(context,LatestMessagesActivity::class.java))
+            startActivity(Intent(context, LatestMessagesActivity::class.java))
         }
 
 

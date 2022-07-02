@@ -15,6 +15,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.kelompok2.recruitmentapp.Activity.*
 import kotlinx.android.synthetic.main.fragment_my.view.*
 
 
@@ -46,7 +47,7 @@ class MyFragment : Fragment() {
         view.versionn.text = "Version " + versionName
 
         view.accountinfo.setOnClickListener {
-            val intent = Intent(context,BasicActivity::class.java)
+            val intent = Intent(context, BasicActivity::class.java)
             startActivity(intent)
         }
 
@@ -56,15 +57,15 @@ class MyFragment : Fragment() {
         }
 
         view.ujumbe.setOnClickListener {
-            val intent = Intent(context,ujumbeActivity::class.java)
+            val intent = Intent(context, ujumbeActivity::class.java)
             startActivity(intent)
         }
         view.ccategory.setOnClickListener {
-            val intent = Intent(context,inputCategoriesActivity::class.java)
+            val intent = Intent(context, inputCategoriesActivity::class.java)
             startActivity(intent)
         }
         view.ffeed.setOnClickListener {
-            val intent = Intent(context,FeedActivity::class.java)
+            val intent = Intent(context, FeedActivity::class.java)
             startActivity(intent)
         }
 
@@ -95,7 +96,7 @@ class MyFragment : Fragment() {
         view.out.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
 
-            val intent = Intent(context,SigninActivity::class.java)
+            val intent = Intent(context, SigninActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
 

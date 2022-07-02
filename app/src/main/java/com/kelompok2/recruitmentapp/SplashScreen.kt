@@ -8,6 +8,7 @@ import android.view.Window
 import android.view.WindowManager
 import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
+import com.kelompok2.recruitmentapp.Activity.introductionactivity
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreen : AppCompatActivity() {
@@ -27,7 +28,7 @@ class SplashScreen : AppCompatActivity() {
         if (FirebaseAuth.getInstance().currentUser == null)
         {
 
-                startActivity(Intent(this,introductionactivity::class.java))
+                startActivity(Intent(this, introductionactivity::class.java))
 
         }
         else {
@@ -46,7 +47,7 @@ class SplashScreen : AppCompatActivity() {
 
         if (FirebaseAuth.getInstance().currentUser == null)
         {
-            val intent = Intent(this@SplashScreen,introductionactivity::class.java)
+            val intent = Intent(this@SplashScreen, introductionactivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()

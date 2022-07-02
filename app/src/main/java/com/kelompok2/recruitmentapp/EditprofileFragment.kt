@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.kelompok2.recruitmentapp.Activity.BasicActivity
 import kotlinx.android.synthetic.main.fragment_editprofile.view.*
 
 
@@ -20,7 +21,7 @@ class EditprofileFragment : Fragment() {
 
 
         view.btn_settings.setOnClickListener {
-            startActivity(Intent(context,BasicActivity::class.java))
+            startActivity(Intent(context, BasicActivity::class.java))
         }
 
         return view

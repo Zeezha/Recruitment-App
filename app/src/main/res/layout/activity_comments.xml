@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="@android:color/white"
     android:layout_height="match_parent"
-    tools:context=".CommentsActivity">
+    tools:context=".Activity.CommentsActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

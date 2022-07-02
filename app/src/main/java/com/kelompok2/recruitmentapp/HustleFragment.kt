@@ -17,6 +17,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.kelompok2.recruitmentapp.Activity.AddPostActivity
 import kotlinx.android.synthetic.main.fragment_hustle.view.*
 
 class HustleFragment : Fragment() {
@@ -51,7 +52,7 @@ class HustleFragment : Fragment() {
         retrievePosts()
 
         view.posthustle.setOnClickListener {
-            val intent = Intent(context,AddPostActivity::class.java)
+            val intent = Intent(context, AddPostActivity::class.java)
             startActivity(intent)
         }
 

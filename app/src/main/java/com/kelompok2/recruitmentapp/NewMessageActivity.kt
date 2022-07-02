@@ -12,6 +12,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.kelompok2.recruitmentapp.Activity.ChatLogActivity
 import com.squareup.picasso.Picasso
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
@@ -66,7 +67,7 @@ class NewMessageActivity : AppCompatActivity() {
                 adapter.setOnItemClickListener { item, view ->
                     val userItem = item as UserItem
 
-                    val intent = Intent(view.context,ChatLogActivity::class.java)
+                    val intent = Intent(view.context, ChatLogActivity::class.java)
                     intent.putExtra(USER_KEY,userItem.userr)
 //                    intent.putExtra(USER_KEY_IMAGE,userItem.user.getImage())
 //                    intent.putExtra(USER_KEY_PROFESSION,userItem.user.getProfession())

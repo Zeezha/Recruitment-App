@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.kelompok2.recruitmentapp.Activity.JobpostingActivity
 import kotlinx.android.synthetic.main.fragment_employerhome.view.*
 
 class employerHome : Fragment() {
@@ -20,7 +21,7 @@ class employerHome : Fragment() {
 
 
         view.posthustleme.setOnClickListener {
-            startActivity(Intent(context,JobpostingActivity::class.java))
+            startActivity(Intent(context, JobpostingActivity::class.java))
         }
 
         return view

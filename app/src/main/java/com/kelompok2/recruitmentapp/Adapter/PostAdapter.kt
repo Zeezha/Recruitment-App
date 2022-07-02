@@ -21,6 +21,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.kelompok2.recruitmentapp.Activity.CommentsActivity
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 
@@ -107,7 +108,7 @@ class PostAdapter(private var mContext:Context,
         }
 
         holder.commentButton.setOnClickListener {
-            val intentComment = Intent(mContext,CommentsActivity::class.java)
+            val intentComment = Intent(mContext, CommentsActivity::class.java)
             intentComment.putExtra("postId", post.getPostid())
             intentComment.putExtra("publisherId", post.getPublisher())
             mContext.startActivity(intentComment)
@@ -118,7 +119,7 @@ class PostAdapter(private var mContext:Context,
 
 
         holder.comments.setOnClickListener {
-            val intentComment = Intent(mContext,CommentsActivity::class.java)
+            val intentComment = Intent(mContext, CommentsActivity::class.java)
             intentComment.putExtra("postId", post.getPostid())
             intentComment.putExtra("publisherId", post.getPublisher())
             mContext.startActivity(intentComment)

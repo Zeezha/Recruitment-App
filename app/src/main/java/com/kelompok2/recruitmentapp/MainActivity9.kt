@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.kelompok2.recruitmentapp.Activity.SigninActivity
 import kotlinx.android.synthetic.main.activity_main9.*
 import kotlinx.android.synthetic.main.activity_signin.*
 
@@ -16,7 +17,7 @@ class MainActivity9 : AppCompatActivity() {
         setContentView(R.layout.activity_main9)
 
         wajuakwambanini.setOnClickListener {
-            startActivity(Intent(this,SigninActivity::class.java))
+            startActivity(Intent(this, SigninActivity::class.java))
         }
 
         btnlogin_three.setOnClickListener {
