@@ -13,16 +13,22 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.kelompok2.recruitmentapp.MainActivity8
+import com.kelompok2.recruitmentapp.Helper.Constant
+import com.kelompok2.recruitmentapp.Helper.PrefHelper
+import com.kelompok2.recruitmentapp.HomeCompanyActivity
 import com.kelompok2.recruitmentapp.R
 import kotlinx.android.synthetic.main.activity_company.*
 import kotlinx.android.synthetic.main.activity_signup.*
 
-class CompanyActivity : AppCompatActivity() {
+class SignupCompanyActivity : AppCompatActivity() {
+
+    lateinit var prefHelper: PrefHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_company)
 
+        prefHelper = PrefHelper(this)
 
         individual.setOnClickListener {
             startActivity(Intent(this, SignupActivity::class.java))
@@ -88,7 +94,7 @@ class CompanyActivity : AppCompatActivity() {
 
             else -> {
 
-                val progressDialog = ProgressDialog(this@CompanyActivity)
+                val progressDialog = ProgressDialog(this@SignupCompanyActivity)
                 progressDialog.setTitle("Sign Up")
                 progressDialog.setMessage("Please wait, this might take a while...")
                 val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
@@ -100,6 +106,8 @@ class CompanyActivity : AppCompatActivity() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful)
                         {
+                            prefHelper.put( Constant.PREF_IS_LOGIN, true)
+                            prefHelper.put( Constant.PREF_LEVEL, "Employer")
                             saveUserInfo(fullnamerep,emailrep,mobilerep,industry,website,companyname,aboutcompany,headquarters,founded,companysize,companyemail,progressDialog)
                         }
                         else
@@ -131,12 +139,13 @@ class CompanyActivity : AppCompatActivity() {
     ) {
 
         val currentUserID = FirebaseAuth.getInstance().currentUser!!.uid
-        val usersRef: DatabaseReference = FirebaseDatabase.getInstance().reference.child("Company")
+        val usersRef: DatabaseReference = FirebaseDatabase.getInstance().reference.child("Users")
 
         val userMap = HashMap<String, Any>()
-        userMap["fullnamerepresentative"] = fullnamerep
-        userMap["emailrepresentative"] = emailrep
-        userMap["mobilerepresentative"] = mobilerep
+        userMap["fullname"] = fullnamerep
+        userMap["email"] = emailrep
+        userMap["mobile"] = mobilerep
+        userMap["profession"] = industry
         userMap["industry"] = industry
         userMap["website"] = website
         userMap["companyname"] = companyname
@@ -155,7 +164,7 @@ class CompanyActivity : AppCompatActivity() {
                     progressDialog.dismiss()
                     Toast.makeText(this,"Account has been created successfully", Toast.LENGTH_LONG).show()
 
-                    val intent = Intent(this@CompanyActivity, MainActivity8::class.java)
+                    val intent = Intent(this@SignupCompanyActivity, HomeCompanyActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
                     finish()

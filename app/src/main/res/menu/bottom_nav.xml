@@ -7,20 +7,11 @@
         android:icon="@drawable/ic_home"
         />
 
-    <item
-        android:id="@+id/jobs"
-        android:title="Jobs"
-        android:icon="@drawable/stwo"
-        />
+
     <item
         android:id="@+id/messages"
         android:title="My Jobs"
         android:icon="@drawable/ic_baseline_local_activity_24"
-        />
-    <item
-        android:id="@+id/notif"
-        android:title="Feeds"
-        android:icon="@drawable/ic_baseline_unarchive_24"
         />
     <item
         android:id="@+id/notifications"

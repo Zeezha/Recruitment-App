@@ -1,68 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".Activity.SigninActivity">
 
 
-    <TextView
-        android:id="@+id/signup_f"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Candidate Sign in"
-        android:textSize="18sp"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="4dp"
-        android:textColor="@color/black"
-        android:layout_centerHorizontal="true"
-        android:layout_marginRight="20dp">
-    </TextView>
-
-
-    <TextView
-        android:id="@+id/signup_four"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:textSize="16sp"
-        android:layout_marginTop="12dp"
-        android:layout_marginLeft="4dp"
-        android:textColor="#2952C8"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp">
-    </TextView>
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginTop="55dp"
-        android:layout_below="@+id/image_login"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:elevation="4dp"
-        android:background="@drawable/ic_rectangle_login"
-       >
-
-
+        android:layout_height="match_parent"
+        android:paddingHorizontal="20dp"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/email_text"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email Address"
-            android:textSize="16sp"
+            android:gravity="center"
+            android:text="Pelamar Kerja"
             android:textStyle="bold"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="4dp"
+            android:textSize="20dp"
+            android:layout_marginVertical="20dp"
+            android:textColor="#152A60"
+            />
 
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="6dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/img_login"/>
 
-        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Silahkan Masukan Akun Pelamar Kerja"
+            android:textSize="14dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="#8189B0"
+            />
+
 
         <EditText
             android:id="@+id/email_text_two"
@@ -70,33 +49,17 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/email_text"
             android:hint="Email Address"
-            android:padding="6dp"
-
-            android:textColorHint="@android:color/black"
-            android:textSize="16sp"
-            android:textColor="@android:color/black"
-            android:background="@drawable/ic_rectangle_loginbtn"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="30dp"
+            android:textColorHint="#8189B0"
+            android:textSize="14sp"
+            android:textColor="#8189B0"
+            android:background="@drawable/input_shape"
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="15dp"/>
 
-        </EditText>
 
-        <TextView
-            android:id="@+id/password_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Password"
-            android:textSize="16sp"
-            android:layout_marginBottom="4dp"
-
-            android:textStyle="bold"
-            android:layout_below="@+id/email_text_two"
-            android:layout_marginTop="10dp"
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="6dp">
-
-        </TextView>
 
         <EditText
             android:id="@+id/password_text_two"
@@ -104,82 +67,68 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/password_text"
             android:hint="Password"
-
-            android:padding="6dp"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="30dp"
             android:inputType="textPassword"
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textSize="16sp"
-            android:background="@drawable/ic_rectangle_loginbtn"
+            android:textColor="#8189B0"
+            android:textColorHint="#8189B0"
+            android:textSize="14sp"
+            android:background="@drawable/input_shape"
             android:layout_marginLeft="6dp"
             android:layout_marginBottom="4dp"
             android:layout_marginRight="6dp"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="15dp"/>
 
-        </EditText>
 
-        <TextView
-            android:id="@+id/forgot_two_yes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forgot Password?"
-            android:layout_below="@+id/password_text_two"
-            android:textSize="14sp"
-            android:textColor="@android:color/black"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp">
-
-        </TextView>
-
-        <Button
-            android:id="@+id/btnlogin"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/forgot_two_yes"
-            android:text="Log In"
-            android:textAllCaps="false"
-            android:textSize="16sp"
-            android:backgroundTint="@color/giddy"
-            android:background="@drawable/ic_rectangle_loginblue"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="@dimen/_20sdp"
+            app:cardCornerRadius="30dp">
 
-        </Button>
+            <Button
+                android:id="@+id/btnlogin"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/ic_rectangle_loginblue"
+                android:backgroundTint="#27448E"
+                android:text="Login Pelamar Kerja"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardCornerRadius="30dp">
+
+            <Button
+                android:id="@+id/wajuakwamba"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/btn_outline_1"
+                android:text="Login Sebagai Pemberi Pekerjaan"
+                android:textAllCaps="false"
+                android:textColor="#27448E"
+                android:textSize="15sp" />
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/signup_four"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btnlogin"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:text="Or"
-            android:id="@+id/wajua"
-            android:textColor="@color/black">
-
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/wajua"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
-            android:text="Sign in as Employer"
-            android:id="@+id/wajuakwamba"
-            android:textColor="@color/darkdarkblue">
-
-        </TextView>
+            android:textColor="#8189B0"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="Belum Punya Akun ? Daftar Sebagai Pelamar Kerja"/>
 
 
 
+    </LinearLayout>
 
-    </RelativeLayout>
-
-
-
-
-
-</RelativeLayout>
+</ScrollView>

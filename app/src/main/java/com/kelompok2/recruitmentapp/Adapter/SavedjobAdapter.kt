@@ -49,7 +49,6 @@ class SavedjobAdapter(private var mContext: Context,
                 {
                     Toast.makeText(mContext,"Job deleted successfully..", Toast.LENGTH_LONG).show()
 
-
                 }
             }
         })

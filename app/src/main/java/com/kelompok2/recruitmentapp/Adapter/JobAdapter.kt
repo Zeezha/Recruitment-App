@@ -44,7 +44,6 @@ class JobAdapter(private var mContext: Context,
 
 
 
-
         holder.itemView.setOnClickListener(View.OnClickListener {
             val pref = mContext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit()
             pref.putString("profileId",job.getTime())
@@ -126,8 +125,6 @@ class JobAdapter(private var mContext: Context,
         jobsRef.child(time).setValue(userMap)
 
 
-
-
     }
 
 
@@ -142,11 +139,6 @@ class JobAdapter(private var mContext: Context,
         var joblocationtextview: TextView = itemView.findViewById(R.id.place)
         var savejobbutton:ImageView = itemView.findViewById(R.id.ukweli)
 
-
-
     }
-
-
-
 
 }

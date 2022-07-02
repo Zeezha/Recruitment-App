@@ -19,7 +19,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.StorageTask
 import com.google.firebase.storage.UploadTask
-import com.kelompok2.recruitmentapp.MainActivity6
+import com.kelompok2.recruitmentapp.HomeCandidate
 import com.kelompok2.recruitmentapp.R
 import com.theartofdev.edmodo.cropper.CropImage
 import kotlinx.android.synthetic.main.activity_feed.*
@@ -138,7 +138,7 @@ class FeedActivity : AppCompatActivity() {
                     progressDialog.dismiss()
                     Toast.makeText(this,"Feed has been posted successfully", Toast.LENGTH_LONG).show()
 
-                    val intent = Intent(this, MainActivity6::class.java)
+                    val intent = Intent(this, HomeCandidate::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
 

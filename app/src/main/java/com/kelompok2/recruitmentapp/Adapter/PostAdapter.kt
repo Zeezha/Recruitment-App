@@ -102,7 +102,7 @@ class PostAdapter(private var mContext:Context,
                     .child(post.getPostid())
                     .child(firebaseUser!!.uid)
                     .removeValue()
-                val intent = Intent(mContext, MainActivity6::class.java)
+                val intent = Intent(mContext, HomeCandidate::class.java)
                 mContext.startActivity(intent)
             }
         }

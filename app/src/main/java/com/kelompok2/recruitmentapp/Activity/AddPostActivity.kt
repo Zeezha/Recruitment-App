@@ -16,7 +16,9 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.StorageTask
 import com.google.firebase.storage.UploadTask
-import com.kelompok2.recruitmentapp.MainActivity6
+import com.kelompok2.recruitmentapp.HomeCandidate
+import com.kelompok2.recruitmentapp.HomeCompanyActivity
+import com.kelompok2.recruitmentapp.MainActivity9
 import com.kelompok2.recruitmentapp.R
 import com.theartofdev.edmodo.cropper.CropImage
 import kotlinx.android.synthetic.main.activity_add_post.*
@@ -106,7 +108,7 @@ class AddPostActivity : AppCompatActivity() {
 
                         Toast.makeText(this,"Post has been uploaded successfully", Toast.LENGTH_LONG).show()
 
-                        val intent = Intent(this, MainActivity6::class.java)
+                        val intent = Intent(this, HomeCompanyActivity::class.java)
                         startActivity(intent)
                         finish()
                         progressDialog.dismiss()

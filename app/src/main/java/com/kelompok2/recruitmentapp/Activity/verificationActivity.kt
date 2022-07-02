@@ -9,7 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.kelompok2.recruitmentapp.MainActivity6
+import com.kelompok2.recruitmentapp.HomeCandidate
 import com.kelompok2.recruitmentapp.R
 import kotlinx.android.synthetic.main.activity_verification.*
 
@@ -57,7 +57,7 @@ class verificationActivity : AppCompatActivity() {
                                 Toast.LENGTH_LONG
                             ).show()
 
-                            val intent = Intent(this, MainActivity6::class.java)
+                            val intent = Intent(this, HomeCandidate::class.java)
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                             startActivity(intent)
 

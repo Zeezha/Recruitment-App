@@ -52,7 +52,7 @@ class MyFragment : Fragment() {
         }
 
         view.postkazi.setOnClickListener {
-            val intent = Intent(context,MainActivity8::class.java)
+            val intent = Intent(context,HomeCompanyActivity::class.java)
             startActivity(intent)
         }
 

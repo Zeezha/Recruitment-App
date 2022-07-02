@@ -69,9 +69,6 @@ class NewMessageActivity : AppCompatActivity() {
 
                     val intent = Intent(view.context, ChatLogActivity::class.java)
                     intent.putExtra(USER_KEY,userItem.userr)
-//                    intent.putExtra(USER_KEY_IMAGE,userItem.user.getImage())
-//                    intent.putExtra(USER_KEY_PROFESSION,userItem.user.getProfession())
-//                    intent.putExtra(USER_KEY_UID,userItem.user.getUid())
                     startActivity(intent)
                     finish()
                 }

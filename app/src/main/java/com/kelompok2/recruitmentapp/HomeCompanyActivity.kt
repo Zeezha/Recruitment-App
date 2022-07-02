@@ -8,7 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity8 : AppCompatActivity() {
+class HomeCompanyActivity : AppCompatActivity() {
     lateinit var employerhome:employerHome
     lateinit var employerjobs:employerJobs
     lateinit var employercandidates:employerCandidates
@@ -21,10 +21,10 @@ class MainActivity8 : AppCompatActivity() {
 
         val bottomNavigation : BottomNavigationView = findViewById(R.id.btn_nav_two)
 
-        val window: Window = this@MainActivity8.window
+        val window: Window = this@HomeCompanyActivity.window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-        window.statusBarColor = ContextCompat.getColor(this@MainActivity8,R.color.giddy)
+        window.statusBarColor = ContextCompat.getColor(this@HomeCompanyActivity,R.color.giddy)
 
         employerhome = employerHome()
         supportFragmentManager
@@ -54,12 +54,6 @@ class MainActivity8 : AppCompatActivity() {
                         .beginTransaction().replace(R.id.frame_layout_two, employercandidates).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
                 }
 
-                R.id.notif -> {
-                    employernotifications = employerNotifications()
-                    supportFragmentManager
-                        .beginTransaction().replace(R.id.frame_layout_two, employernotifications).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
-
-                }
 
                 R.id.jobs -> {
                     employerjobs = employerJobs()

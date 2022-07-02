@@ -26,7 +26,7 @@ class employerProfile : Fragment() {
 
         firebaseUser = FirebaseAuth.getInstance().currentUser!!
 
-        val jobsRef = FirebaseDatabase.getInstance().getReference().child("Company").child(firebaseUser.uid)
+        val jobsRef = FirebaseDatabase.getInstance().getReference().child("Users").child(firebaseUser.uid)
 
         jobsRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {

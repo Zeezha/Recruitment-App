@@ -1,23 +1,25 @@
 package com.kelompok2.recruitmentapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.kelompok2.recruitmentapp.Adapter.JobAdapter
+import com.kelompok2.recruitmentapp.Adapter.ManagementJobAdapter
 import com.kelompok2.recruitmentapp.Model.Job
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.kelompok2.recruitmentapp.Model.User
 
 class employerJobs : Fragment() {
 
     private var recyclerViewajiry: RecyclerView? = null
-    private var jobAdapter: JobAdapter? = null
+    private var managementJobAdapter: ManagementJobAdapter? = null
     private var mJob: MutableList<Job>? = null
 
     override fun onCreateView(
@@ -34,8 +36,8 @@ class employerJobs : Fragment() {
         linearLayout.stackFromEnd = true
         recyclerViewajiry?.layoutManager = linearLayout
         mJob = ArrayList()
-        jobAdapter = context?.let { JobAdapter(it,mJob as ArrayList<Job>,true) }
-        recyclerViewajiry?.adapter = jobAdapter
+        managementJobAdapter = context?.let { ManagementJobAdapter(it,mJob as ArrayList<Job>,"") }
+        recyclerViewajiry?.adapter = managementJobAdapter
         recyclerViewajiry?.visibility = View.VISIBLE
         retrieveJobs()
 
@@ -43,21 +45,27 @@ class employerJobs : Fragment() {
     }
 
     private fun retrieveJobs() {
-        val jobsRef = FirebaseDatabase.getInstance().getReference("Jobs").child("Building and Construction")
+
+
+        val jobsRef = FirebaseDatabase.getInstance().getReference("Jobs")
         jobsRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
 
+
                 mJob?.clear()
 
-                for (snapshot in p0.children)
-                {
-                    val job = snapshot.getValue(Job::class.java)
-                    if (job != null)
-                    {
-                        mJob?.add(job)
+                for (snapshot in p0.children) {
+                    for (data in snapshot.children){
+                        val job = data.getValue(Job::class.java)
+                        Log.e("Data Jobs",job.toString());
+                        if (job != null)
+                        {
+                            mJob?.add(job)
+                        }
+                        managementJobAdapter?.notifyDataSetChanged()
                     }
-                    jobAdapter?.notifyDataSetChanged()
                 }
+                
             }
 
             override fun onCancelled(error: DatabaseError) {

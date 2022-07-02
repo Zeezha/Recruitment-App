@@ -11,7 +11,6 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.kelompok2.recruitmentapp.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class NavigationActivity : AppCompatActivity() {
     lateinit var secondFragment: SecondFragment
@@ -65,12 +64,6 @@ class NavigationActivity : AppCompatActivity() {
                         .beginTransaction().replace(R.id.frame_layout, savedFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
                 }
 
-                R.id.notif -> {
-                    latestinfoFragment = LatestinfoFragment()
-                    supportFragmentManager
-                        .beginTransaction().replace(R.id.frame_layout, latestinfoFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
-
-                }
 
                 R.id.jobs -> {
                     firstFragment = FirstFragment()

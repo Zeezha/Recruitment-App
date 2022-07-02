@@ -8,13 +8,21 @@ import android.text.TextUtils
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.kelompok2.recruitmentapp.Activity.SigninActivity
+import com.kelompok2.recruitmentapp.Helper.Constant
+import com.kelompok2.recruitmentapp.Helper.PrefHelper
 import kotlinx.android.synthetic.main.activity_main9.*
 import kotlinx.android.synthetic.main.activity_signin.*
 
 class MainActivity9 : AppCompatActivity() {
+
+    lateinit var prefHelper: PrefHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        prefHelper = PrefHelper(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main9)
+
 
         wajuakwambanini.setOnClickListener {
             startActivity(Intent(this, SigninActivity::class.java))
@@ -23,9 +31,6 @@ class MainActivity9 : AppCompatActivity() {
         btnlogin_three.setOnClickListener {
             loginUser()
         }
-
-
-
 
     }
 
@@ -49,8 +54,10 @@ class MainActivity9 : AppCompatActivity() {
                 mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener {task ->
                     if (task.isSuccessful)
                     {
+                        prefHelper.put( Constant.PREF_IS_LOGIN, true)
+                        prefHelper.put( Constant.PREF_LEVEL, "Employer")
                         progressDialog.dismiss()
-                        val intent = Intent(this@MainActivity9,MainActivity8::class.java)
+                        val intent = Intent(this@MainActivity9,HomeCompanyActivity::class.java)
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
                         finish()

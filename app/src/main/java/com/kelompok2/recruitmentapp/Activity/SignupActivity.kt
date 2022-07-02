@@ -16,23 +16,29 @@ import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.kelompok2.recruitmentapp.MainActivity6
+import com.kelompok2.recruitmentapp.Helper.Constant
+import com.kelompok2.recruitmentapp.Helper.PrefHelper
+import com.kelompok2.recruitmentapp.HomeCandidate
 import com.kelompok2.recruitmentapp.R
 import kotlinx.android.synthetic.main.activity_jobposting.*
 import kotlinx.android.synthetic.main.activity_main9.*
 import kotlinx.android.synthetic.main.activity_signup.*
 
 class SignupActivity : AppCompatActivity() {
+
+    lateinit var prefHelper: PrefHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
         val window: Window = this@SignupActivity.window
+        prefHelper = PrefHelper(this)
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         window.statusBarColor = ContextCompat.getColor(this@SignupActivity, R.color.giddy)
 
         wajuakwambaniniwetu.setOnClickListener {
-            startActivity(Intent(this, CompanyActivity::class.java))
+            startActivity(Intent(this, SignupCompanyActivity::class.java))
         }
 
         val languages = resources.getStringArray(R.array.Languages)
@@ -107,6 +113,8 @@ class SignupActivity : AppCompatActivity() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful)
                         {
+                            prefHelper.put( Constant.PREF_IS_LOGIN, true)
+                            prefHelper.put( Constant.PREF_LEVEL, "Candidate")
                             saveUserInfo(fullname,email,mobile,profession,progressDialog)
                         }
                         else
@@ -139,7 +147,9 @@ class SignupActivity : AppCompatActivity() {
                 {
                     progressDialog.dismiss()
 
-                    val intent = Intent(this@SignupActivity, MainActivity6::class.java)
+                    prefHelper.put( Constant.PREF_IS_LOGIN, true)
+                    prefHelper.put( Constant.PREF_LEVEL, "Candidate")
+                    val intent = Intent(this@SignupActivity, HomeCandidate::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
                     finish()

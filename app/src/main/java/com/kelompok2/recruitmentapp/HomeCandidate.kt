@@ -10,9 +10,8 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity6 : AppCompatActivity() {
+class HomeCandidate : AppCompatActivity() {
     lateinit var secondFragment: SecondFragment
     lateinit var lastFragment:LastFragment
     lateinit var notificationsFragment: NotificationsFragment
@@ -33,10 +32,10 @@ class MainActivity6 : AppCompatActivity() {
 
         val bottomNavigation : BottomNavigationView = findViewById(R.id.btn_nav)
 
-        val window:Window = this@MainActivity6.window
+        val window:Window = this@HomeCandidate.window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-        window.statusBarColor = ContextCompat.getColor(this@MainActivity6,R.color.giddy)
+        window.statusBarColor = ContextCompat.getColor(this@HomeCandidate,R.color.giddy)
 
         lastFragment = LastFragment()
         supportFragmentManager
@@ -64,12 +63,6 @@ class MainActivity6 : AppCompatActivity() {
                         .beginTransaction().replace(R.id.frame_layout, savedFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
                 }
 
-                R.id.notif -> {
-                    latestinfoFragment = LatestinfoFragment()
-                    supportFragmentManager
-                        .beginTransaction().replace(R.id.frame_layout, latestinfoFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
-
-                }
 
                 R.id.jobs -> {
                     firstFragment = FirstFragment()

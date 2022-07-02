@@ -11,16 +11,24 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.kelompok2.recruitmentapp.ForgotPasswordActivity
-import com.kelompok2.recruitmentapp.MainActivity6
+import com.kelompok2.recruitmentapp.Helper.Constant
+import com.kelompok2.recruitmentapp.Helper.PrefHelper
+import com.kelompok2.recruitmentapp.HomeCandidate
 import com.kelompok2.recruitmentapp.MainActivity9
 import com.kelompok2.recruitmentapp.R
 import kotlinx.android.synthetic.main.activity_signin.*
 import kotlinx.android.synthetic.main.activity_signup.*
 
 class SigninActivity : AppCompatActivity() {
+
+    lateinit var prefHelper: PrefHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
+
+        prefHelper = PrefHelper(this)
+
         val window: Window = this@SigninActivity.window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
@@ -35,9 +43,9 @@ class SigninActivity : AppCompatActivity() {
             loginUser()
         }
 
-        forgot_two_yes.setOnClickListener {
-            startActivity(Intent(this, ForgotPasswordActivity::class.java))
-        }
+//        forgot_two_yes.setOnClickListener {
+//            startActivity(Intent(this, ForgotPasswordActivity::class.java))
+//        }
         wajuakwamba.setOnClickListener {
             startActivity(Intent(this, MainActivity9::class.java))
         }
@@ -66,7 +74,9 @@ class SigninActivity : AppCompatActivity() {
                     if (task.isSuccessful)
                     {
                         progressDialog.dismiss()
-                        val intent = Intent(this@SigninActivity, MainActivity6::class.java)
+                        prefHelper.put( Constant.PREF_IS_LOGIN, true)
+                        prefHelper.put( Constant.PREF_LEVEL, "Candidate")
+                        val intent = Intent(this@SigninActivity, HomeCandidate::class.java)
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
                         finish()
@@ -89,7 +99,7 @@ class SigninActivity : AppCompatActivity() {
 
         if (FirebaseAuth.getInstance().currentUser != null)
         {
-            val intent = Intent(this@SigninActivity, MainActivity6::class.java)
+            val intent = Intent(this@SigninActivity, HomeCandidate::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()
