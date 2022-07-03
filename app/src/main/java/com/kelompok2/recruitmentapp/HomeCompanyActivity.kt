@@ -48,13 +48,6 @@ class HomeCompanyActivity : AppCompatActivity() {
                 }
 
 
-                R.id.messages -> {
-                    employercandidates = employerCandidates()
-                    supportFragmentManager
-                        .beginTransaction().replace(R.id.frame_layout_two, employercandidates).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
-                }
-
-
                 R.id.jobs -> {
                     employerjobs = employerJobs()
                     supportFragmentManager

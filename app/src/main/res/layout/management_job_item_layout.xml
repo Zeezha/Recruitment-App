@@ -2,37 +2,39 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/nyuma"
     android:layout_height="wrap_content"
+    android:elevation="5dp"
     >
 
     <androidx.cardview.widget.CardView
 
         android:layout_width="match_parent"
-        app:cardBackgroundColor="#FFFFFF"
-        android:layout_height="160dp"
-
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp">
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="30dp">
 
         <RelativeLayout
             android:id="@+id/one"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/text_job"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Software Developer"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginTop="4dp"
-                android:textColor="@android:color/black"
                 android:layout_marginLeft="10dp"
-                >
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="4dp"
+                android:text="Software Developer"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold">
 
             </TextView>
 
@@ -48,57 +50,30 @@
 
             </ImageView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_job"
-                android:layout_marginLeft="12dp"
-                android:text="Full Time"
-                android:layout_marginTop="4dp"
-                android:id="@+id/time"
-                android:textColor="@android:color/black"
-                android:textSize="14sp">
-
-            </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text_job"
-                android:layout_marginLeft="8dp"
-                android:text="|"
-                android:layout_toEndOf="@+id/time"
-                android:layout_marginTop="4dp"
-                android:id="@+id/sdjhjh"
-                android:textColor="@android:color/black"
-                android:textSize="14sp"
-                android:layout_toRightOf="@+id/time">
-
-            </TextView>
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="80dp"
                 android:id="@+id/logo"
+                android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_below="@+id/time"
+                android:layout_below="@+id/industry"
+                android:layout_marginLeft="6dp"
                 android:layout_marginTop="14dp"
-                android:layout_marginBottom="14dp"
-                android:src="@drawable/bag"
-                android:layout_marginLeft="6dp">
+                android:src="@drawable/bag">
 
             </de.hdodenhof.circleimageview.CircleImageView>
 
             <TextView
+                android:id="@+id/companyname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Safaricom PLC"
-                android:id="@+id/companyname"
+                android:layout_below="@+id/industry"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="20dp"
                 android:layout_toEndOf="@+id/logo"
                 android:layout_toRightOf="@+id/logo"
-                android:layout_below="@+id/time"
-                android:textSize="16sp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="14dp"
+                android:text="Safaricom PLC"
                 android:textColor="@color/darkdarkblue"
+                android:textSize="16sp"
                 android:textStyle="bold">
 
             </TextView>
@@ -106,15 +81,14 @@
             <ImageView
                 android:layout_width="21dp"
                 android:layout_height="17dp"
-                android:src="@drawable/check"
-                android:layout_below="@+id/time"
-                android:layout_marginLeft="0dp"
+                android:layout_below="@+id/industry"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="22dp"
                 android:layout_toEndOf="@+id/companyname"
-                android:layout_marginTop="33dp"
-
-
                 android:layout_toRightOf="@+id/companyname"
-                >
+
+
+                android:src="@drawable/check">
 
             </ImageView>
 
@@ -123,16 +97,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:layout_toEndOf="@+id/sdjhjh"
-                android:text="Technology"
-
-                android:layout_toRightOf="@+id/time"
-                android:textSize="14sp"
-                android:layout_marginTop="4dp"
-                android:layout_marginLeft="8dp"
                 android:layout_below="@+id/text_job"
+                android:layout_marginLeft="8dp"
+
+                android:layout_marginTop="4dp"
+                android:text="Technology"
                 android:textColor="@android:color/black"
-                >
+                android:textSize="14sp">
 
             </TextView>
 
@@ -148,38 +119,42 @@
                 android:layout_toRightOf="@+id/logo"
                 android:text="Nairobi"
                 android:textColor="@android:color/black"
-                android:textSize="14sp">
-
-            </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/companyname"
-                android:layout_marginLeft="8dp"
-                android:text="|"
-                android:layout_toEndOf="@+id/place"
-                android:layout_marginTop="2dp"
-                android:id="@+id/mbili"
-                android:textColor="@android:color/black"
-                android:textSize="14sp"
-                android:layout_toRightOf="@+id/time">
-
-            </TextView>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/companyname"
-                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/place"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="2dp"
-                android:layout_toEndOf="@+id/mbili"
-                android:layout_toRightOf="@+id/mbili"
+                android:layout_toEndOf="@+id/logo"
+                android:layout_toRightOf="@+id/logo"
                 android:text="Kenya"
-                android:textColor="@android:color/black"
-                android:textSize="14sp">
+                android:textColor="#322E2E"
+                android:textSize="14sp" />
 
-            </TextView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/money"
+                android:layout_marginLeft="15dp"
+                android:layout_toEndOf="@+id/logo"
+                android:layout_toRightOf="@+id/logo"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="15dp">
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#27448E"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:paddingVertical="3dp"
+                    android:text="Fulltime"
+                    android:textSize="11dp" />
+            </androidx.cardview.widget.CardView>
+
 
         </RelativeLayout>
 

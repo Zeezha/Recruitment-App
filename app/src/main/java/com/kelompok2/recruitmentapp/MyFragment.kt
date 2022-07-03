@@ -16,6 +16,9 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.kelompok2.recruitmentapp.Activity.*
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_basic.*
+import kotlinx.android.synthetic.main.fragment_my.*
 import kotlinx.android.synthetic.main.fragment_my.view.*
 
 
@@ -44,30 +47,18 @@ class MyFragment : Fragment() {
 
         val versionName = context?.let { GetAppVersion(it) }
 
-        view.versionn.text = "Version " + versionName
 
         view.accountinfo.setOnClickListener {
             val intent = Intent(context, BasicActivity::class.java)
             startActivity(intent)
         }
 
-        view.postkazi.setOnClickListener {
-            val intent = Intent(context,HomeCompanyActivity::class.java)
-            startActivity(intent)
-        }
 
         view.ujumbe.setOnClickListener {
             val intent = Intent(context, ujumbeActivity::class.java)
             startActivity(intent)
         }
-        view.ccategory.setOnClickListener {
-            val intent = Intent(context, inputCategoriesActivity::class.java)
-            startActivity(intent)
-        }
-        view.ffeed.setOnClickListener {
-            val intent = Intent(context, FeedActivity::class.java)
-            startActivity(intent)
-        }
+
 
 
         val userRef = FirebaseDatabase.getInstance().getReference().child("Users").child(firebaseUser.uid)
@@ -83,13 +74,15 @@ class MyFragment : Fragment() {
                     val testing = user!!.getFullname()
                     val career = user!!.getProfession()
 
+                    Picasso.get().load(user!!.getImage()).placeholder(R.drawable.onee).into(civii)
+
                     view.you.text = testing
                     view.youtwo.text = career
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-//                TODO("Not yet implemented")
+//
             }
         })
 

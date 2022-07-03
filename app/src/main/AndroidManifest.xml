@@ -21,7 +21,10 @@
         <activity android:name="com.kelompok2.recruitmentapp.HomeCompanyActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.SimuActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.spinnersActivity" />
-        <activity android:name="com.kelompok2.recruitmentapp.Activity.ujumbeActivity" />
+        <activity
+            android:name="com.kelompok2.recruitmentapp.Activity.ujumbeActivity"
+            android:label="Tentang Kami"
+            android:theme="@style/AppTheme2"/>
         <activity android:name="com.kelompok2.recruitmentapp.Activity.verificationActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.autocompleteActivity" />
 
@@ -61,7 +64,11 @@
 
         <activity android:name="com.kelompok2.recruitmentapp.Activity.UserdetailsActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.TafutanetworkActivity" />
-        <activity android:name="com.kelompok2.recruitmentapp.Activity.JobpostingActivity" />
+        <activity
+            android:name="com.kelompok2.recruitmentapp.Activity.JobpostingActivity"
+            android:label="Posting Pekerjaan Baru"
+            android:parentActivityName=".HomeCompanyActivity"
+            android:theme="@style/AppTheme2"/>
         <activity
             android:name="com.kelompok2.recruitmentapp.SplashScreen"
             android:theme="@style/Theme.AppCompat.NoActionBar">

@@ -157,11 +157,11 @@ class LastFragment : Fragment() {
         val jobsReff = FirebaseDatabase.getInstance().getReference("Searchtext").child(firebaseUser.uid)
         jobsReff.addChildEventListener(object : ChildEventListener{
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {

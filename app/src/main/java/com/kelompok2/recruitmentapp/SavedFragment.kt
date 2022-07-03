@@ -64,11 +64,11 @@ class SavedFragment : Fragment() {
         val jobsReff = FirebaseDatabase.getInstance().getReference("New").child(testing)
         jobsReff.addChildEventListener(object : ChildEventListener{
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
@@ -109,7 +109,7 @@ class SavedFragment : Fragment() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
         })
 

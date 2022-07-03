@@ -16,8 +16,8 @@
             android:id="@+id/yes"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingVertical="@dimen/_10sdp"
-            android:background="@color/giddy">
+            android:background="@color/giddy"
+            android:paddingVertical="@dimen/_10sdp">
 
 
             <TextView

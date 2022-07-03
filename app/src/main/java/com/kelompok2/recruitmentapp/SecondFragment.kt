@@ -235,7 +235,7 @@ class SecondFragment : Fragment(){
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
         })
     }
@@ -262,7 +262,7 @@ class SecondFragment : Fragment(){
 //            }
 //
 //            override fun onCancelled(error: DatabaseError) {
-//                TODO("Not yet implemented")
+//
 //            }
 //        })
 //    }

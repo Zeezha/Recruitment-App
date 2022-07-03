@@ -31,6 +31,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="4dp"
                 android:text="Software Developer"
+                android:layout_marginRight="20dp"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold">

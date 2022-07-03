@@ -56,18 +56,10 @@ class HomeCandidate : AppCompatActivity() {
                         .beginTransaction().replace(R.id.frame_layout, myFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
                 }
 
-
                 R.id.messages -> {
                     savedFragment = SavedFragment()
                     supportFragmentManager
                         .beginTransaction().replace(R.id.frame_layout, savedFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
-                }
-
-
-                R.id.jobs -> {
-                    firstFragment = FirstFragment()
-                    supportFragmentManager
-                        .beginTransaction().replace(R.id.frame_layout, firstFragment).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
                 }
 
 

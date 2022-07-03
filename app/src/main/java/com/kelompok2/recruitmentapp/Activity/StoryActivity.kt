@@ -127,7 +127,7 @@ class StoryActivity : AppCompatActivity(), StoriesProgressView.StoriesListener {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
         })
     }
@@ -151,7 +151,7 @@ class StoryActivity : AppCompatActivity(), StoriesProgressView.StoriesListener {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
         })
     }
@@ -175,7 +175,7 @@ class StoryActivity : AppCompatActivity(), StoriesProgressView.StoriesListener {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
         })
     }

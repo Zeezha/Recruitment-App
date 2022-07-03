@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
+    android:paddingHorizontal="@dimen/_20sdp"
     tools:context=".Activity.JobpostingActivity">
 
 
@@ -34,14 +35,14 @@
                 </de.hdodenhof.circleimageview.CircleImageView>
 
                 <TextView
+                    android:id="@+id/change_image_job"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/profile_image_job"
                     android:layout_centerHorizontal="true"
-                    android:id="@+id/change_image_job"
-                    android:text="Change Company Logo"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/black">
+                    android:text="Ganti Thumbnails"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp">
 
                 </TextView>
 
@@ -50,7 +51,7 @@
                     android:id="@+id/email_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Job Details"
+                    android:text="Detail Pekerjaan"
                     android:textSize="16sp"
                     android:layout_below="@+id/change_image_job"
                     android:textStyle="bold"
@@ -65,13 +66,13 @@
                     android:id="@+id/email_text_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Job Title"
                     android:layout_below="@+id/email_text"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
+                    android:layout_marginLeft="4dp"
                     android:layout_marginTop="7dp"
+                    android:text="Judul Pekerjaan"
                     android:textColor="@android:color/black"
-                    android:layout_marginLeft="4dp">
+                    android:textSize="16sp"
+                    android:textStyle="bold">
 
                 </TextView>
 
@@ -80,21 +81,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/email_text_text"
-                    android:hint="  Job Title"
-                    android:textColorHint="@android:color/black"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/black"
-                    android:background="@drawable/ic_rectangle_loginbtn"
                     android:layout_marginLeft="6dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginRight="6dp"
-                    android:layout_marginTop="8dp">
+                    android:background="@drawable/ic_rectangle_loginbtn"
+                    android:hint="  Masukkan Judul Pekerjaan..."
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:textSize="16sp">
 
                 </EditText>
                 <TextView
                     android:id="@+id/companytext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Company Name"
+                    android:text="Nama Perusahaan"
                     android:layout_below="@+id/jobtitle"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -109,21 +110,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/companytext"
-                    android:hint="  Company Name"
-                    android:textColorHint="@android:color/black"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/black"
-                    android:background="@drawable/ic_rectangle_loginbtn"
                     android:layout_marginLeft="6dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginRight="6dp"
-                    android:layout_marginTop="8dp">
+                    android:background="@drawable/ic_rectangle_loginbtn"
+                    android:hint="  Masukkan Nama Perusahaan..."
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black"
+                    android:textSize="16sp">
 
                 </EditText>
                 <TextView
                     android:id="@+id/tech"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Job Category"
+                    android:text="Kategori Pekerjaan"
                     android:layout_below="@+id/companyedit"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -167,7 +168,7 @@
                     android:id="@+id/password_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Job Description"
+                    android:text="Deskripsi Pekerjaan"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_below="@+id/wapi"
@@ -197,7 +198,7 @@
                     android:id="@+id/password_confirm_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Responsibilities"
+                    android:text="Persyaratan"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_below="@+id/jobdescription"
@@ -228,7 +229,7 @@
                     android:id="@+id/password_tttt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Required Skills"
+                    android:text="Skill yang dibutuhkan"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_below="@+id/responsibilities"
@@ -243,7 +244,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/password_tttt"
-                    android:hint="  Required Skills"
+                    android:hint="  Masukkan Skill"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/black"
                     android:textSize="16sp"
@@ -258,7 +259,7 @@
                     android:id="@+id/reg_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Required Education qualifications"
+                    android:text="Persyaratan Pendidikan"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_below="@+id/skills"
@@ -273,7 +274,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/reg_one"
-                    android:hint="  Education"
+                    android:hint="  Masukkan Pendidikan..."
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/black"
                     android:textSize="16sp"
@@ -288,7 +289,7 @@
                     android:id="@+id/location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Location"
+                    android:text="Lokasi"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_below="@+id/education"
@@ -303,7 +304,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/location"
-                    android:hint="  Location"
+                    android:hint="  Masukkan Lokasi..."
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/black"
                     android:textSize="16sp"
@@ -317,7 +318,7 @@
                     android:id="@+id/sala"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Salary"
+                    android:text="Gaji"
                     android:layout_below="@+id/joblocation"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -332,7 +333,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/sala"
-                    android:hint="  eg Confidential"
+                    android:hint="  eg Gaji/Bulan"
                     android:textColorHint="@android:color/black"
                     android:textSize="16sp"
                     android:textColor="@android:color/black"
@@ -347,7 +348,7 @@
                     android:id="@+id/mail_company"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Job Type"
+                    android:text="Tipe Pekerjaan"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_below="@+id/salatext"
@@ -362,7 +363,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/mail_company"
-                    android:hint="  Job Type eg. fulltime"
+                    android:hint="   eg. fulltime/partime"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/black"
                     android:textSize="16sp"
@@ -377,13 +378,13 @@
                     android:id="@+id/pass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mode of Application"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
                     android:layout_below="@+id/jobtype"
+                    android:layout_marginLeft="4dp"
                     android:layout_marginTop="10dp"
+                    android:text="Masukkan Email Penerima CV"
                     android:textColor="@android:color/black"
-                    android:layout_marginLeft="4dp">
+                    android:textSize="16sp"
+                    android:textStyle="bold">
 
                 </TextView>
 
@@ -393,7 +394,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/pass"
                     android:hint="  Email to receive applications"
-                    android:inputType="textPassword"
+                    android:inputType="textEmailAddress"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/black"
                     android:textSize="16sp"
@@ -409,32 +410,39 @@
                     android:id="@+id/reg_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="By posting job you agree to the JobMaster Terms of service   and Cookie Policy"
                     android:layout_below="@+id/deadline"
                     android:layout_centerHorizontal="true"
-                    android:textSize="14sp"
-                    android:textColor="@android:color/black"
-                    android:layout_marginRight="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Dengan memposting pekerjaan, Anda menyetujui Persyaratan layanan dan Kebijakan Cookie Nyari-Kerja"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp">
 
                 </TextView>
 
-                <Button
-                    android:id="@+id/postjob"
+                <androidx.cardview.widget.CardView
+                    android:layout_below="@+id/reg_two"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/reg_two"
-                    android:text="Post Job"
-                    android:textAllCaps="false"
-                    android:textSize="16sp"
-                    android:background="@drawable/ic_rectangle_loginblue"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginBottom="30dp">
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="@dimen/_20sdp">
 
-                </Button>
+                    <Button
+                        android:id="@+id/postjob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="Posting Pekerjaan"
+                        android:textAllCaps="false"
+                        android:textSize="16sp">
+
+                    </Button>
+
+                </androidx.cardview.widget.CardView>
 
 
 

@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.kelompok2.recruitmentapp.Model.User
+import kotlinx.android.synthetic.main.fragment_employer_jobs.*
 
 class employerJobs : Fragment() {
 
@@ -51,6 +52,7 @@ class employerJobs : Fragment() {
         jobsRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
 
+                shimmer.visibility = View.GONE
 
                 mJob?.clear()
 

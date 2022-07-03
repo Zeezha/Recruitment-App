@@ -128,7 +128,7 @@ RecyclerView.Adapter<StoryAdapter.ViewHolder>()
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
         })
     }
@@ -238,7 +238,7 @@ RecyclerView.Adapter<StoryAdapter.ViewHolder>()
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
         })
     }
