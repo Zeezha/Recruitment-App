@@ -108,7 +108,6 @@ class JobdetailFragment : Fragment() {
                                 view?.title_app_text_two?.text = job!!.getJoblocation()
                                 view?.appl_io_one?.text = job!!.getDeadline()
                                 view?.money?.text = job!!.getSalary()
-                                view?.title_app_text_mail?.text = job!!.getDeadline()
                                 val jobTitle = job!!.getJobtitle()
                                 val company = job!!.getCompanyname()
 

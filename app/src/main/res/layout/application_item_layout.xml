@@ -125,58 +125,30 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/title_app_text_two"
-                android:text="Email:"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:id="@+id/title_app_tree"
-
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                >
-
-            </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/title_app_two"
-                android:text="jobmaster@gmail.com"
+                android:text="How to apply"
                 android:textColor="@color/darkdarkblue"
                 android:textSize="16sp"
-                android:id="@+id/title_app_text_mail"
-                android:layout_toRightOf="@+id/title_app_tree"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                >
-
-            </TextView>
-
-
-            <TextView
                 android:id="@+id/appl_io"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/title_app_text_mail"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:text="Click to Apply"
-                android:textColor="@color/darkdarkblue"
-                android:textSize="16sp">
+                android:layout_below="@+id/title_app_text_two"
+                android:layout_centerHorizontal="true"
+                >
 
             </TextView>
 
             <TextView
-                android:id="@+id/appl_io_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/appl_io"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
                 android:text="Send your email to jobmaster@gmail.com"
                 android:textColor="@color/black"
-                android:textSize="14sp">
+                android:textSize="14sp"
+                android:id="@+id/appl_io_one"
+                android:layout_marginTop="6dp"
+                android:layout_below="@+id/appl_io"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                >
 
             </TextView>
         </RelativeLayout>
