@@ -24,44 +24,39 @@ class SplashScreen : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         prefHelper = PrefHelper(this)
-        val window: Window = this@SplashScreen.window
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-        window.statusBarColor = ContextCompat.getColor(this@SplashScreen,R.color.giddy)
 
-
-        if (FirebaseAuth.getInstance().currentUser == null)
-        {
-
-            startActivity(Intent(this, introductionactivity::class.java))
-
-
-        }
-        else {
         Handler().postDelayed({
-            Log.e("PREF LEVEL",prefHelper.getString(Constant.PREF_LEVEL).toString());
-            if(prefHelper.getString( Constant.PREF_LEVEL)=="Candidate"){
-                startActivity(Intent(this,HomeCandidate::class.java))
-            }else if(prefHelper.getString( Constant.PREF_LEVEL )=="Employer"){
-                startActivity(Intent(this, HomeCompanyActivity::class.java))
+            if (FirebaseAuth.getInstance().currentUser == null)
+            {
+
+                startActivity(Intent(this, introductionactivity::class.java))
+
             }
-//            finish()
+            else {
+                Log.e("PREF LEVEL",prefHelper.getString(Constant.PREF_LEVEL).toString());
+                if(prefHelper.getString( Constant.PREF_LEVEL)=="Candidate"){
+                    startActivity(Intent(this,HomeCandidate::class.java))
+                }else if(prefHelper.getString( Constant.PREF_LEVEL )=="Employer"){
+                    startActivity(Intent(this, HomeCompanyActivity::class.java))
+                    if (FirebaseAuth.getInstance().currentUser == null)
+                    {
+
+                        startActivity(Intent(this, introductionactivity::class.java))
+
+                    }
+                    else {
+                        Log.e("PREF LEVEL",prefHelper.getString(Constant.PREF_LEVEL).toString());
+                        if(prefHelper.getString( Constant.PREF_LEVEL)=="Candidate"){
+                            startActivity(Intent(this,HomeCandidate::class.java))
+                        }else if(prefHelper.getString( Constant.PREF_LEVEL )=="Employer"){
+                            startActivity(Intent(this, HomeCompanyActivity::class.java))
+                        }
+                        //            finish()
+                    }}
+            }
         }, SPLASH_TIME)
-        }
 
 
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-        if (FirebaseAuth.getInstance().currentUser == null)
-        {
-            val intent = Intent(this@SplashScreen, introductionactivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
-            finish()
-        }
     }
 
 

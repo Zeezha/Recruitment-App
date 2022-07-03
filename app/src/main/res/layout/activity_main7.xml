@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="@color/nyuma"
+    android:background="@color/white"
     xmlns:tools="http://schemas.android.com/tools">
 
 
@@ -13,20 +13,19 @@
         tools:context=".MainActivity7">
 
         <RelativeLayout
+            android:id="@+id/yes"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/yes"
-            android:layout_marginBottom="14dp"
-            android:background="@color/nyuma">
+            android:paddingVertical="@dimen/_10sdp"
+            android:background="@color/giddy">
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="8dp"
-                android:text="JobMaster"
-                android:textColor="@color/giddy"
+                android:text="Nyari-Kerja"
+                android:textColor="@color/white"
                 android:textSize="22sp"
                 android:textStyle="bold">
 
@@ -34,26 +33,15 @@
 
 
             <ImageView
-                android:layout_width="40dp"
                 android:id="@+id/optiven"
-                android:layout_height="26dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/ic_menu"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="14dp"
-                android:backgroundTint="@android:color/white">
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@android:color/white"
+                android:src="@drawable/ic_round_chat_24">
 
             </ImageView>
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_tafuta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/wditwhat"
-                android:visibility="gone">
-
-            </androidx.recyclerview.widget.RecyclerView>
 
 
         </RelativeLayout>
@@ -61,58 +49,91 @@
         <!--    search result recycler view-->
 
 
-        <TextView
-            android:id="@+id/recommendeda"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/yes"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="6dp"
-            android:fontFamily="sans-serif-condensed"
-            android:text="List Jobs"
-            android:textColor="@color/black"
-            android:textSize="18sp">
-
-        </TextView>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_home_t"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/recommendeda"
-            android:layout_marginBottom="10dp"
-            android:scrollbars="horizontal"
-            android:visibility="visible">
-
-        </androidx.recyclerview.widget.RecyclerView>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Suggested Jobs"
-            android:textSize="20sp"
-            android:visibility="gone"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed"
-            android:id="@+id/uon"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginBottom="6dp"
-            android:textColor="@color/black"
-            android:layout_below="@+id/recycler_view_home_t">
-
-        </TextView>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_uonke"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            android:layout_below="@+id/uon"
-            android:layout_marginBottom="10dp">
+            android:layout_below="@+id/yes"
+            android:layout_marginBottom="10dp"/>
 
-        </androidx.recyclerview.widget.RecyclerView>
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_below="@+id/yes">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="5dp">
+
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardBackgroundColor="#7C7979"
+                        app:cardCornerRadius="30dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="5dp">
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardBackgroundColor="#7C7979"
+                        app:cardCornerRadius="30dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="5dp">
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardBackgroundColor="#7C7979"
+                        app:cardCornerRadius="30dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="5dp">
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardBackgroundColor="#7C7979"
+                        app:cardCornerRadius="30dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
 
 
     </RelativeLayout>

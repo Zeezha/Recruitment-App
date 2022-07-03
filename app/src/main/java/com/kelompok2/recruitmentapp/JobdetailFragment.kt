@@ -95,8 +95,7 @@ class JobdetailFragment : Fragment() {
                                 view?.title_app_text_one?.text = job!!.getCompanyname()
                                 view?.title_app_text_two?.text = job!!.getJoblocation()
                                 view?.appl_io_one?.text = job!!.getDeadline()
-                                view?.harmo?.text = job!!.getJobtitle()
-                                view?.harmonize?.text = job!!.getCompanyname()
+                                view?.money?.text = job!!.getSalary()
 
 
 

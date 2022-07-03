@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="#CCEDF1"
+    android:background="#FFFFFF"
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
@@ -15,30 +15,14 @@
             android:layout_height="wrap_content">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Job Detail"
-            android:layout_marginLeft="20dp"
-            android:textSize="16sp"
-            android:id="@+id/harmo"
-            android:textColor="@color/white"
-            >
-
-        </TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Job Detail"
-            android:layout_marginLeft="20dp"
-            android:textSize="12sp"
-            android:layout_below="@+id/harmo"
-            android:id="@+id/harmonize"
-            android:textColor="@color/white"
-            android:layout_marginTop="2dp"
-            >
-
-        </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Detail Pekerjaan"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp" />
 
         </RelativeLayout>
 
@@ -73,175 +57,198 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="70dp"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/logo_one_company"
 
-            android:id="@+id/logo_one_company"
-            android:layout_height="70dp"
-            android:layout_marginTop="24dp"
-            android:src="@drawable/bag"
-            android:layout_marginLeft="6dp">
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/bag">
 
-        </de.hdodenhof.circleimageview.CircleImageView>
+            </de.hdodenhof.circleimageview.CircleImageView>
 
-        <TextView
-            android:id="@+id/job_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="94dp"
-            android:layout_marginTop="28dp"
-            android:text="Software Developer"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:textSize="18sp">
+            <TextView
+                android:id="@+id/job_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="99dp"
+                android:layout_marginTop="28dp"
+                android:text="Software Developer"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold">
 
-        </TextView>
+            </TextView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_below="@id/job_name"
-            android:id="@+id/det_company"
-            android:text="Safaricom PLC"
-            android:layout_marginLeft="99dp"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/det_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/job_name"
+                android:layout_marginLeft="99dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center_horizontal"
+                android:text="Safaricom PLC"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="16sp">
 
-        </TextView>
+            </TextView>
 
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_marginTop="128dp"
-            android:layout_marginLeft="20dp"
-            android:layout_height="18dp"
-            android:src="@drawable/lcation">
+            <LinearLayout
+                android:id="@+id/infos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo_one_company"
+                android:layout_marginVertical="20dp"
+                android:orientation="vertical">
 
-        </ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nairobi"
-            android:id="@+id/wapi"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="130dp"
-            android:layout_marginLeft="60dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-        </TextView>
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/lcation">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_marginTop="128dp"
-            android:layout_marginLeft="130dp"
-            android:layout_height="18dp"
-            android:src="@drawable/salary">
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nairobi"
+                        android:id="@+id/wapi"
+                        android:textColor="@android:color/black">
 
-        </ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="200-300k"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="129dp"
-            android:layout_marginLeft="170dp">
+                    </TextView>
 
-        </TextView>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_marginTop="129dp"
-            android:layout_marginLeft="250dp"
-            android:layout_height="18dp"
-            android:src="@drawable/fulltime">
+                </LinearLayout>
 
-        </ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Full Time"
-            android:id="@+id/mpakalini"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="129dp"
-            android:layout_marginLeft="290dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
 
-        </TextView>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/salary">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200-300k"
+                        android:textColor="@android:color/black"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/fulltime"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Full Time"
+                        android:id="@+id/mpakalini"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="5dp"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
 
             <View
+                android:id="@+id/line1"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#807D7D"
-                android:layout_marginTop="172dp">
+                android:layout_below="@id/infos"
+                android:background="#807D7D">
 
             </View>
 
 
+            <TextView
+                android:id="@+id/titledesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:text="Deskripsi Pekerjaan"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Job Description"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="190dp"
-            android:layout_marginLeft="18dp">
+            </TextView>
 
-        </TextView>
+            <TextView
 
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="220dp"
-            android:textSize="16sp"
-            android:id="@+id/det_job"
-            android:textColor="@android:color/black"
-            android:text="The job entails researching ,designing and implementing software programs,Testing snd evaluating new programs is also part of the job.Identifying  areas of are deploy software tools,processes and metrics"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="10dp">
-
-        </TextView>
-            <View
+                android:id="@+id/det_job"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#807D7D"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titledesc"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:justificationMode="inter_word"
+                android:text="The job entails researching ,designing and implementing software programs,Testing snd evaluating new programs is also part of the job.Identifying  areas of are deploy software tools,processes and metrics"
+                android:textColor="@android:color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <View
                 android:id="@+id/kaba"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:layout_below="@+id/det_job"
-                android:layout_marginTop="2dp">
+                android:layout_marginTop="2dp"
+                android:background="#807D7D">
 
             </View>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Responsibilities"
-            android:textSize="16sp"
-            android:layout_below="@+id/kaba"
-            android:textStyle="bold"
-            android:id="@+id/res"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="18dp">
+            <TextView
+                android:id="@+id/res"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kaba"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:text="Persyaratan"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold">
 
-        </TextView>
+            </TextView>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:textSize="16sp"
-            android:layout_below="@+id/res"
-            android:id="@+id/det_responsibility"
-            android:textColor="@android:color/black"
-            android:text="The job entails researching ,designing and implementing software programs,Testing snd evaluating new programs is also part of the job.Identifying  areas of modification in existing programs and subsequently developint these modifications.You are required to develop quality assuarance procedures, deploy software tools,processes and metrics"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="10dp">
+            <TextView
+                android:id="@+id/det_responsibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/res"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="The job entails researching ,designing and implementing software programs,Testing snd evaluating new programs is also part of the job.Identifying  areas of modification in existing programs and subsequently developint these modifications.You are required to develop quality assuarance procedures, deploy software tools,processes and metrics"
+                android:justificationMode="inter_word"
+                android:textColor="@android:color/black"
+                android:textSize="16sp">
 
-        </TextView>
+            </TextView>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -255,7 +262,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Education Requirements"
+            android:text="Persyaratan Pendidikan"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_below="@id/mmmm"
@@ -266,43 +273,45 @@
 
         </TextView>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:id="@+id/det_education"
-            android:layout_marginTop="10dp"
-            android:textSize="16sp"
-            android:layout_below="@+id/edu"
-            android:textColor="@android:color/black"
-            android:text="The job  is also part of the job.Identifying  areas of modification in existing programs and subsequently developint these modifications.You are required to develop quality assuarance procedures, deploy software tools,processes and metrics"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="10dp">
+            <TextView
+                android:id="@+id/det_education"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edu"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="The job  is also part of the job.Identifying  areas of modification in existing programs and subsequently developint these modifications.You are required to develop quality assuarance procedures, deploy software tools,processes and metrics"
+                android:textColor="@android:color/black"
+                android:justificationMode="inter_word"
+                android:textSize="16sp">
 
-        </TextView>
+            </TextView>
+
             <View
+                android:id="@+id/kabanak"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#807D7D"
-                android:id="@+id/kabanak"
                 android:layout_below="@+id/det_education"
-                android:layout_marginTop="2dp">
+                android:layout_marginTop="2dp"
+                android:background="#807D7D">
 
             </View>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Skills"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:id="@+id/ski"
-            android:layout_below="@+id/kabanak"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="18dp">
+            <TextView
+                android:id="@+id/ski"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kabanak"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:text="Skills"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold">
 
-        </TextView>
+            </TextView>
 
         <TextView
 
@@ -316,6 +325,7 @@
             android:textColor="@android:color/black"
             android:text="programs also part of the job.Identifying  areas of modification in existing programs and subsequently developint these modifications.You are required to develop quality assuarance procedures, deploy software tools,processes and metrics"
             android:layout_marginLeft="18dp"
+            android:justificationMode="inter_word"
             android:layout_marginRight="10dp">
 
         </TextView>
@@ -331,31 +341,30 @@
             </View>
 
             <TextView
+                android:id="@+id/appl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Application Details"
-                android:textColor="@color/darkdarkblue"
-                android:textSize="16sp"
                 android:layout_below="@+id/kabamain"
-                android:id="@+id/appl"
-                android:layout_marginTop="4dp"
                 android:layout_marginLeft="18dp"
-                >
+                android:layout_marginTop="4dp"
+                android:text="Detail Pekerjaan"
+                android:textColor="@color/darkdarkblue"
+                android:textSize="16sp">
 
             </TextView>
+
             <TextView
+                android:id="@+id/title_app"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/appl"
-                android:text="Job Title :"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-
-                android:id="@+id/title_app"
-
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="18dp"
-                >
+                android:layout_marginTop="10dp"
+
+                android:text="Pekerjaan :"
+
+                android:textColor="@color/black"
+                android:textSize="16sp">
 
             </TextView>
             <TextView
@@ -378,7 +387,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/title_app"
-                android:text="Company Name :"
+                android:text="Nama Perusahaan :"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:id="@+id/title_app_one"
@@ -407,7 +416,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/title_app_one"
-                android:text="Location :"
+                android:text="Lokasi :"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:id="@+id/title_app_two"
@@ -434,32 +443,30 @@
             </TextView>
 
             <TextView
+                android:id="@+id/appl_io"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="How to apply"
-                android:textColor="@color/darkdarkblue"
-                android:textSize="16sp"
-                android:id="@+id/appl_io"
-                android:layout_marginTop="10dp"
                 android:layout_below="@+id/title_app_text_two"
                 android:layout_marginLeft="18dp"
-                >
+                android:layout_marginTop="10dp"
+                android:text="Kirimkan CV dan Fortofolio ke email :"
+                android:textColor="@color/darkdarkblue"
+                android:textSize="16sp">
 
             </TextView>
 
             <TextView
+                android:id="@+id/appl_io_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Send your email to jobmaster@gmail.com"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:id="@+id/appl_io_one"
-                android:layout_marginTop="6dp"
                 android:layout_below="@+id/appl_io"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
-                >
+                android:text="Send your email to jobmaster@gmail.com"
+                android:textColor="@color/black"
+                android:textSize="14sp">
 
             </TextView>
 

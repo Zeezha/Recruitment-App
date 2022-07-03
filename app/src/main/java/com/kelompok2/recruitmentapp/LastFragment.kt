@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.kelompok2.recruitmentapp.Activity.LatestMessagesActivity
+import kotlinx.android.synthetic.main.activity_main7.*
 import kotlinx.android.synthetic.main.activity_main7.view.*
 import kotlinx.android.synthetic.main.fragment_last.view.wditwhat
 
@@ -120,6 +121,7 @@ class LastFragment : Fragment() {
                     jobsRef.addValueEventListener(object : ValueEventListener {
                         override fun onDataChange(p0: DataSnapshot) {
 
+                            shimmer.visibility = View.GONE
                             mJob?.clear()
 
                             for (snapshot in p0.children) {

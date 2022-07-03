@@ -16,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.kelompok2.recruitmentapp.Helper.Constant
 import com.kelompok2.recruitmentapp.Helper.PrefHelper
 import com.kelompok2.recruitmentapp.HomeCompanyActivity
+import com.kelompok2.recruitmentapp.MainActivity9
 import com.kelompok2.recruitmentapp.R
 import kotlinx.android.synthetic.main.activity_company.*
 import kotlinx.android.synthetic.main.activity_signup.*
@@ -30,7 +31,11 @@ class SignupCompanyActivity : AppCompatActivity() {
 
         prefHelper = PrefHelper(this)
 
-        individual.setOnClickListener {
+        login_employer.setOnClickListener {
+            startActivity(Intent(this, MainActivity9::class.java))
+        }
+
+        btnsignup_individu.setOnClickListener {
             startActivity(Intent(this, SignupActivity::class.java))
         }
 

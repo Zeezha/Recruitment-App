@@ -14,6 +14,7 @@ import com.kelompok2.recruitmentapp.Model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.fragment_saved.*
 
 class SavedFragment : Fragment() {
     private var savedjobAdapter: SavedjobAdapter? = null
@@ -50,6 +51,8 @@ class SavedFragment : Fragment() {
 
         userRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
+
+                shimmer.visibility = View.GONE
 
                 if (p0.exists())
                 {

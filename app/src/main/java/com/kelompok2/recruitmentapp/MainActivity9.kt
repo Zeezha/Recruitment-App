@@ -8,6 +8,7 @@ import android.text.TextUtils
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.kelompok2.recruitmentapp.Activity.SigninActivity
+import com.kelompok2.recruitmentapp.Activity.SignupCompanyActivity
 import com.kelompok2.recruitmentapp.Helper.Constant
 import com.kelompok2.recruitmentapp.Helper.PrefHelper
 import kotlinx.android.synthetic.main.activity_main9.*
@@ -24,12 +25,20 @@ class MainActivity9 : AppCompatActivity() {
         setContentView(R.layout.activity_main9)
 
 
-        wajuakwambanini.setOnClickListener {
+        login_candidate.setOnClickListener {
             startActivity(Intent(this, SigninActivity::class.java))
         }
 
         btnlogin_three.setOnClickListener {
             loginUser()
+        }
+
+        signup_employer.setOnClickListener {
+            startActivity(Intent(this, SignupCompanyActivity::class.java))
+        }
+
+        lupa_password.setOnClickListener {
+            startActivity(Intent(this, ForgotPasswordActivity::class.java))
         }
 
     }

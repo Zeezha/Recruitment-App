@@ -59,8 +59,6 @@ class JobAdapter(private var mContext: Context,
             holder.savejobbutton.setImageResource(R.drawable.ic_baseline_star_24)
             Toast.makeText(mContext,"Job Saved successfully",Toast.LENGTH_LONG).show()
 
-
-
             val jobtitle = job.getJobtitle()
             val jobdescription = job.getJobdescription()
             val responsibilities = job.getResponsibilities()

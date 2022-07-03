@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#27448E</color>
     <color name="colorPrimarytwo">#E3E2E6</color>
     <color name="colorPrimaryDark">#1E88E5</color>
     <color name="colorAccent">#FF5252</color>
@@ -16,14 +16,14 @@
     <color name="black">#000000</color>
     <color name="top">#9CCBF1</color>
     <color name="nyuma">#F1F6F6</color>
-    <color name="giddy">#36054E</color>
+    <color name="giddy">#204091</color>
 
 
 
 
     <color name="backgroundcolor">#fcfcfc</color>
     <color name="lightgray">#ededed</color>
-    <color name="deeppurple">#7c4dff</color>
+    <color name="deeppurple">#204091</color>
     <color name="yello">#ffb300</color>
     <color name="green">#00bfa5</color>
     <color name="testcolorblue">#152b38</color>

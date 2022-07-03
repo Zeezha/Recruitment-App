@@ -43,9 +43,11 @@ class SigninActivity : AppCompatActivity() {
             loginUser()
         }
 
-//        forgot_two_yes.setOnClickListener {
-//            startActivity(Intent(this, ForgotPasswordActivity::class.java))
-//        }
+        forgot_two_yes.setOnClickListener {
+            startActivity(Intent(this, ForgotPasswordActivity::class.java))
+        }
+
+
         wajuakwamba.setOnClickListener {
             startActivity(Intent(this, MainActivity9::class.java))
         }

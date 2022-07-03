@@ -33,12 +33,20 @@
         <activity android:name="com.kelompok2.recruitmentapp.Activity.FeedActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.inputCategoriesActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.ChatLogActivity" />
-        <activity android:name="com.kelompok2.recruitmentapp.NewMessageActivity">
+        <activity
+            android:name="com.kelompok2.recruitmentapp.NewMessageActivity"
+            android:label="Pilih User"
+            android:parentActivityName=".Activity.LatestMessagesActivity"
+            android:theme="@style/AppTheme2">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kelompok2.recruitmentapp.Activity.LatestMessagesActivity" />
         </activity>
-        <activity android:name="com.kelompok2.recruitmentapp.Activity.LatestMessagesActivity" />
+        <activity
+            android:name="com.kelompok2.recruitmentapp.Activity.LatestMessagesActivity"
+            android:label="Riwayat Chat"
+            android:parentActivityName=".SplashScreen"
+            android:theme="@style/AppTheme2"/>
         <activity android:name="com.kelompok2.recruitmentapp.ForgotPasswordActivity" />
         <activity android:name="com.kelompok2.recruitmentapp.HomeCandidate" />
         <activity android:name="com.kelompok2.recruitmentapp.Activity.CommentsActivity" />

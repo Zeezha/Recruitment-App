@@ -1,5 +1,6 @@
 package com.kelompok2.recruitmentapp.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -47,6 +48,10 @@ class ChatLogActivity : AppCompatActivity() {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         window.statusBarColor = ContextCompat.getColor(this@ChatLogActivity, R.color.darkdarkblue)
 
+        backk.setOnClickListener {
+            val intent = Intent(this, LatestMessagesActivity::class.java)
+            startActivity(intent)
+        }
 //        val username = intent.getStringExtra(NewMessageActivity.USER_KEY)
 //        val picture = intent.getStringExtra(NewMessageActivity.USER_KEY_IMAGE)
 //        val profession = intent.getStringExtra(NewMessageActivity.USER_KEY_PROFESSION)

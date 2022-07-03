@@ -7,6 +7,8 @@ import android.util.Log
 import android.view.Window
 import android.view.WindowManager
 import androidx.core.content.ContextCompat
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.kelompok2.recruitmentapp.Model.Userr
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -58,8 +60,11 @@ class NewMessageActivity : AppCompatActivity() {
                 p0.children.forEach {
                     Log.d("NewMessage",it.toString())
                     val userr = it.getValue(Userr::class.java)
+                    val firebaseUser: FirebaseUser = FirebaseAuth.getInstance().currentUser!!
                     if (userr != null){
-                        adapter.add(UserItem(userr))
+                       if(firebaseUser.uid!=userr.uid){
+                           adapter.add(UserItem(userr))
+                       }
                     }
 
                 }

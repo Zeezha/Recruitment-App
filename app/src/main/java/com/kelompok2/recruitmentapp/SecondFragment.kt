@@ -273,7 +273,7 @@ class SecondFragment : Fragment(){
             .build()
             .getAsObjectList(User::class.java, object : ParsedRequestListener<List<User>> {
                 override fun onResponse(users: List<User>) {
-                    shimmerFrameLayout.stopShimmerAnimation()
+//                    shimmerFrameLayout.stopShimmerAnimation()
                     shimmerFrameLayout.visibility = View.GONE
 //                    recycler_view_post.visibility = View.VISIBLE
 
@@ -442,15 +442,6 @@ class SecondFragment : Fragment(){
 
 
 
-
-    override fun onResume() {
-        super.onResume()
-        shimmerFrameLayout.startShimmerAnimation()
-    }
-    override fun onPause() {
-        shimmerFrameLayout.stopShimmerAnimation()
-        super.onPause()
-    }
 
 
 
